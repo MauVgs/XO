@@ -1,13 +1,14 @@
 <?php 
 
-    $texto = "ooxXm";
-    $texto = strtoupper($texto);
+    $texto = "ooxxx";
+    
 
     $resultado = XO($texto);
 
 
     function XO($string){
-        $resultado = True;
+        $resultado = TRUE;
+        $string = strtoupper($string);
         $string = str_split($string);
         $res = array_count_values($string);
 
@@ -18,11 +19,11 @@
 
         if($resX == $resO){
             print_r("Correcto");
-            $resultado = True;
+            $resultado = TRUE;
         }
         else{
             print_r("Incorrecto");
-            $resultado = False;
+            $resultado = FALSE;
         }
 
         return $resultado;
